@@ -1,2 +1,2 @@
-# Angular2Blog
-Simple blog site using Angular2 with redux pattern
+# Angular2Auth
+Angular 2 Token Based Authentication
