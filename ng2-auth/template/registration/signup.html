@@ -1,0 +1,45 @@
+<div class="col-md-12">
+    <div style="margin-top:50px;" class="mainbox col-md-6 offset-md-3 col-sm-8 offset-sm-2">
+        <div class="card">
+            <div class="card-header">
+                Register
+            </div>
+            <div class="card-block">
+                <form [formGroup]="frmregister" novalidate (ngSubmit)="Register(frmregister.value, frmregister.valid)">
+                    <div class="form-group">
+                        <label class="control-label">Name</label>
+                        <input type="text" class="form-control" formControlName="name" placeholder="Name">
+                        <div class="help-block text-danger" *ngIf="!frmregister.controls.name.valid && (frmregister.controls.name.touched || submitted)">
+                            <span [hidden]="!frmregister.controls['name'].hasError('required')">Name is required</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Email</label>
+                        <input type="text" class="form-control" formControlName="email" placeholder="Email">
+                        <div class="help-block text-danger" *ngIf="!frmregister.controls.email.valid && (frmregister.controls.email.touched || submitted)">
+                            <span [hidden]="!frmregister.controls['email'].hasError('required')">Email is required</span>
+                            <span [hidden]="!frmregister.controls['email'].hasError('pattern')">Enter valid email id</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Password</label>
+                        <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                        <div class="help-block text-danger" *ngIf="!frmregister.controls.password.valid && (frmregister.controls.password.touched || submitted)">
+                            <span [hidden]="!frmregister.controls['password'].hasError('required')">Password is required</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Confirm Password</label>
+                        <input type="password" class="form-control" formControlName="repassword" placeholder="Retype Password">
+                        <div class="help-block text-danger" *ngIf="!frmregister.controls.repassword.valid && (frmregister.controls.repassword.touched || submitted)">
+                            <span [hidden]="!frmregister.controls['repassword'].hasError('required')">Confirm Password is required</span>
+                            <span [hidden]="!frmregister.controls['repassword'].hasError('notEquivalent')">Confirm Password is not match</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block">Register</button>
+                </form>
+                Existing Member: <a [routerLink]="['/SignIn']">SignIn</a>
+            </div>
+        </div>
+    </div>
+</div>

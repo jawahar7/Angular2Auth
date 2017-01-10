@@ -1,0 +1,27 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#
+            </th>
+            <th>
+                Items
+            </th>
+            <th>
+                Delete
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let t of todo$ | async; let i = index">
+            <td>{{i+1}}
+            </td>
+            <td>
+                <span [class.complete]="t.Completed" (click)="toggletodo(t)"><a>{{t.Name}}</a></span>
+            </td>
+            <td>
+                <a class="text-danger" (click)="deletetodo(t.Id)">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{{todo$ | async | json}}

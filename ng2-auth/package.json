@@ -1,0 +1,44 @@
+{
+    "name": "ng2-blog",
+    "version": "1.0.0",
+    "description": "Simple Blog Application using Angular2",
+    "main": "index.js",
+    "scripts": {
+        "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+        "lite": "lite-server",
+        "tsc": "tsc",
+        "tsc:w": "tsc -w"
+    },
+    "author": "jawahar",
+    "license": "MIT",
+    "dependencies": {
+        "@angular/common": "~2.2.0",
+        "@angular/compiler": "~2.2.0",
+        "@angular/core": "~2.2.0",
+        "@angular/forms": "~2.2.0",
+        "@angular/http": "~2.2.0",
+        "@angular/platform-browser": "~2.2.0",
+        "@angular/platform-browser-dynamic": "~2.2.0",
+        "@angular/router": "~3.2.0",
+        "@angular/upgrade": "~2.2.0",
+        "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.17",
+        "angular-in-memory-web-api": "~0.1.15",
+        "angular2-uuid": "^1.1.0",
+        "bootstrap": "^4.0.0-alpha.2",
+        "core-js": "^2.4.1",
+        "font-awesome": "^4.7.0",
+        "ng2-redux": "^5.1.0",
+        "ng2-redux-router": "^2.0.0",
+        "redux": "^3.6.0",
+        "reflect-metadata": "^0.1.8",
+        "rxjs": "5.0.0-beta.12",
+        "systemjs": "0.19.39",
+        "zone.js": "^0.6.25"
+    },
+    "devDependencies": {
+        "concurrently": "^3.0.0",
+        "hammerjs": "^2.0.8",
+        "lite-server": "^2.2.2",
+        "typescript": "^2.0.3"
+    }
+}
